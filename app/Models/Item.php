@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -32,6 +32,6 @@ class Item extends Model
      */
     public function todo_list()
     {
-        return $this->belongsTo('App\TodoList');
+        return $this->belongsTo('App\Models\TodoList');
     }
 }
