@@ -10,6 +10,8 @@ class TasksController extends Controller
 {
     /**
      * Get the template for creating lists.
+     *
+     * @param Illuminate\Http\Request $req
      */
     public function complete(Request $req){
         $input = $req->all();

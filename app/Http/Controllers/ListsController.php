@@ -16,7 +16,9 @@ class ListsController extends Controller
     }
 
     /**
-     * Get the template for creating lists.
+     * Get the template for editing lists.
+     *
+     * @param $id
      */
     public function edit($id){
         return view('list.edit', ['list' => TodoList::findOrFail($id)]);
@@ -79,6 +81,8 @@ class ListsController extends Controller
 
     /**
      * Delete a list.
+     *
+     * @param Illuminate\Http\Request $req
      */
     public function delete(Request $req){
         $input = $req->all();
